@@ -1,0 +1,23 @@
+{
+  "aliceMinVersion": "1.0.0-b5",
+  "author": "philipp2310",
+  "category": "information",
+  "conditions": {
+    "lang": [
+      "en",
+      "de"
+    ]
+  },
+  "desc": "Control your fritz!box, and show its status!",
+  "icon": "fab fa-battle-net",
+  "maintainers": [],
+  "name": "FritzBox",
+  "pipRequirements": [
+    "fritzconnect=1.6.0"
+  ],
+  "speakableName": "Fritz Box",
+  "systemRequirements": [
+    ""
+  ],
+  "version": "0.0.1"
+}
