@@ -1,0 +1,26 @@
+{
+  "username": {
+		"defaultValue": "",
+		"dataType": "string",
+		"isSensitive": false,
+		"description": "Login name for your fritz!box",
+		"beforeUpdate": "tryConnection",
+		"onUpdate": "reconnect"
+	},
+	"password": {
+		"defaultValue": "",
+		"dataType": "string",
+		"isSensitive": true,
+		"description": "Password for your fritz!box",
+		"beforeUpdate": "tryConnection",
+		"onUpdate": "reconnect"
+	},
+	"ip": {
+		"defaultValue": "fritz.box",
+		"dataType": "string",
+		"isSensitive": false,
+		"description": "The hostname or ip address of your fritz!box",
+		"beforeUpdate": "tryConnection",
+		"onUpdate": "reconnect"
+	}
+}

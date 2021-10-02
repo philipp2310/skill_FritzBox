@@ -1,0 +1,52 @@
+.Missedcalls {
+	width: 100%;
+	height: 100%;
+	padding: 5px;
+	box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.MissedcallsList {
+	height: 100%;
+	overflow: hidden;
+}
+.mcDate {
+	min-width: 3em;
+}
+.mcTime {
+	min-width: 2em;
+	font-size: 0.8em;
+}
+.mcCaller {
+	min-width: 8em;
+}
+.call {
+	background-color: var(--secondary);
+	min-width: 5em;
+	margin: .3em;
+	padding: .3em;
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+    column-gap: 2em;
+}
+.actionBar {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.new {
+	color: red;
+}
+
+.call::before {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	font-size: 1.5em;
+	content: "\f098";
+	padding: 0;
+}
