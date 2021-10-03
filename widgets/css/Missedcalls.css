@@ -30,6 +30,7 @@
 	flex-flow: row;
 	flex-wrap: wrap;
     column-gap: 2em;
+	align-items: flex-end;
 }
 .actionBar {
     bottom: 0;

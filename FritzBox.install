@@ -13,11 +13,11 @@
   "maintainers": [],
   "name": "FritzBox",
   "pipRequirements": [
-    "fritzconnect=1.6.0"
+    "fritzconnection==1.7.0"
   ],
   "speakableName": "Fritz Box",
   "systemRequirements": [
     ""
   ],
-  "version": "0.0.1"
+  "version": "0.0.3"
 }

@@ -1,26 +1,8 @@
 {
-  "username": {
-		"defaultValue": "",
-		"dataType": "string",
+	"lastRead": {
+		"defaultValue": -1,
+		"dataType": "int",
 		"isSensitive": false,
-		"description": "Login name for your fritz!box",
-		"beforeUpdate": "tryConnection",
-		"onUpdate": "reconnect"
-	},
-	"password": {
-		"defaultValue": "",
-		"dataType": "string",
-		"isSensitive": true,
-		"description": "Password for your fritz!box",
-		"beforeUpdate": "tryConnection",
-		"onUpdate": "reconnect"
-	},
-	"ip": {
-		"defaultValue": "fritz.box",
-		"dataType": "string",
-		"isSensitive": false,
-		"description": "The hostname or ip address of your fritz!box",
-		"beforeUpdate": "tryConnection",
-		"onUpdate": "reconnect"
+		"description": "The ID of the last read missed call. Automatically set by the widget on click"
 	}
 }

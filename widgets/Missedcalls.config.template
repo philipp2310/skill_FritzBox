@@ -1,0 +1,8 @@
+{
+	"showButtons": {
+		"defaultValue": true,
+		"dataType": "boolean",
+		"isSensitive": false,
+		"description": "Show buttons in the widget to switch pages. Without buttons only the newest calls are visible."
+	}
+}

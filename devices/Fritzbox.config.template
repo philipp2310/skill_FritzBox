@@ -1,0 +1,23 @@
+{
+	"deviceConfigs": {
+	  "username": {
+			"defaultValue": "",
+			"dataType": "string",
+			"isSensitive": false,
+			"description": "Login name for your fritz!box"
+		},
+		"password": {
+			"defaultValue": "",
+			"dataType": "string",
+			"isSensitive": true,
+			"description": "Password for your fritz!box"
+		},
+		"ip": {
+			"defaultValue": "fritz.box",
+			"dataType": "string",
+			"isSensitive": false,
+			"description": "The hostname or ip address of your fritz!box"
+		}
+	},
+	"linkConfigs": { }
+}
