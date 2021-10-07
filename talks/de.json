@@ -1,0 +1,16 @@
+{
+  "missedCall": {
+    "default": [
+      "{} hast du einen Anruf von {} verpasst",
+      "Du hast einen verpassten Anruf {} von {}"
+    ],
+    "short": []
+  },
+  "incomingCall": {
+    "default": [
+      "{} ruft an!",
+      "Eingehender Anruf von {}"
+    ],
+    "short": ["{} ruft an!"]
+  }
+}

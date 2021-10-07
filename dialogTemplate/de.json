@@ -1,0 +1,56 @@
+{
+  "skill": "FritzBox",
+  "slotTypes": [
+    {
+      "name": "callType",
+      "matchingStrictness": null,
+      "automaticallyExtensible": false,
+      "useSynonyms": true,
+      "technicalValue": true,
+      "values": [
+        {
+          "value": "incoming",
+          "synonyms": [
+            "eingehende",
+            "eingehend"
+          ]
+        },
+        {
+          "value": "outgoing",
+          "synonyms": [
+            "ausgehende",
+            "ausgehend"
+          ]
+        },
+        {
+          "value": "missed",
+          "synonyms": [
+            "verpasste",
+            "verpasst"
+          ]
+        }
+      ]
+    }
+  ],
+  "intents": [
+    {
+      "name": "askForCalls",
+      "enabledByDefault": false,
+      "utterances": [
+        "Haben wir Anrufe {verpasst:=>callType}?",
+        "Haben wir {verpasste:=>callType} Anrufe?",
+        "Gibt es neue {verpasste:=>callType} anrufe?",
+        "Habe ich Anrufe {verpasst:=>callType}?",
+        "Habe ich {verpasste:=>callType} Anrufe?"
+      ],
+      "slots": [
+        {
+          "name": "callType",
+          "type": "callType",
+          "required": false,
+          "missingQuestion": ""
+        }
+      ]
+    }
+  ]
+}
