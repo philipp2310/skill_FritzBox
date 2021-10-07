@@ -4,5 +4,11 @@
 		"dataType": "int",
 		"isSensitive": false,
 		"description": "The ID of the last read missed call. Automatically set by the widget on click"
+	},
+	"defaultCountry": {
+		"defaultValue": "+49",
+		"dataType": "string",
+		"isSensitive": false,
+		"description": "The country code to add to a number if it isn't found in the phonebook directly."
 	}
 }

@@ -1,37 +1,47 @@
 {
-	"skill": "FritzBox",
-	"slotTypes": [
-		{
-			"name": "DummySlot",
-			"matchingStrictness": null,
-			"automaticallyExtensible": false,
-			"useSynonyms": true,
-			"values": [
-				{
-					"value": "foo",
-					"synonyms": [
-						"bar"
-					]
-				}
-			]
-		}
-	],
-	"intents": [
-		{
-			"name": "Dummy",
-			"enabledByDefault": true,
-			"utterances": [
-				"dummy {foo:=>DummySlotName}",
-				"bar"
-			],
-			"slots": [
-				{
-					"name": "DummySlotName",
-					"required": false,
-					"type": "DummySlot",
-					"missingQuestion": ""
-				}
-			]
-		}
-	]
+  "skill": "FritzBox",
+  "intents": [
+    {
+      "enabledByDefault": true,
+      "name": "askForCalls",
+      "slots": [
+        {
+          "missingQuestion": "",
+          "name": "callType",
+          "required": false,
+          "type": "callType"
+        }
+      ],
+      "utterances": [
+        "Did I {miss:=>callType} any calls?",
+        "What was the last {outgoing:=>callType} call?",
+        "Do I have any {missed:=>callType} calls?"
+      ]
+    }
+  ],
+  "slotTypes": [
+    {
+      "automaticallyExtensible": false,
+      "matchingStrictness": null,
+      "name": "callType",
+      "technicalValue": true,
+      "useSynonyms": true,
+      "values": [
+        {
+          "synonyms": [],
+          "value": "outgoing"
+        },
+        {
+          "synonyms": [],
+          "value": "incoming"
+        },
+        {
+          "synonyms": [
+            "miss"
+          ],
+          "value": "missed"
+        }
+      ]
+    }
+  ]
 }

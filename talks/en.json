@@ -1,6 +1,19 @@
 {
-	"dummy": [
-		"example sentence",
-		"another example sentence"
-	]
+  "missedCall": {
+    "default": [
+      "There is a new missed call {} from {}",
+      "You missed a call {} from {}",
+      "You got a missed call {} from {}"
+    ],
+    "short": [
+      "Missed call {} {}"
+    ]
+  },
+  "incomingCall": {
+    "default": [
+      "{} is calling.",
+      "Incoming call from {}."
+    ],
+    "short": []
+  }
 }

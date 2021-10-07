@@ -34,10 +34,16 @@ class Fritzbox(Device):
 		icon = ''
 		if self.getConfig('ip'):
 			try:
-				if self.skillInstance.existsNewMissedCall():
-					icon = Path(f'{self.Commons.rootDir()}/skills/{self.skillName}/devices/img/Fritzbox_callMissed.png')
+				stat = self.getParam("status")
+				if not stat or stat == "idle":
+					if self.skillInstance.existsNewMissedCall():
+						icon = Path(f'{self.Commons.rootDir()}/skills/{self.skillName}/devices/img/Fritzbox_callMissed.png')
+					else:
+						icon = Path(f'{self.Commons.rootDir()}/skills/{self.skillName}/devices/img/Fritzbox_ok.png')
+				elif stat == "ringing":
+					icon = Path(f'{self.Commons.rootDir()}/skills/{self.skillName}/devices/img/Fritzbox_ringing.gif')
 				else:
-					icon = Path(f'{self.Commons.rootDir()}/skills/{self.skillName}/devices/img/Fritzbox_ok.png')
+					icon = Path(f'{self.Commons.rootDir()}/skills/{self.skillName}/devices/img/Fritzbox_{stat}.png')
 			except:
 				pass
 
@@ -60,6 +66,7 @@ class Fritzbox(Device):
 		mc = self.skillInstance.getFirstUnreadCall()
 		if mc:
 			self.skillInstance.updateConfig("lastRead", mc['id'])
+			self.updateParam("lastRead", mc['id'])
 			return OnDeviceClickReaction(action=DeviceClickReactionAction.INFO_NOTIFICATION.value, data=f"Missed call: {mc['date']} {mc['name']}").toDict()
 			#todo: send device update for icon change
 
