@@ -129,11 +129,12 @@ class FritzBox(AliceSkill):
 					event_queue = monitor.start()
 					self.logWarning("Error: fritzmonitor connection failed - reconnecting")
 				else:
-					pass #self.logInfo("still alive")
+					self.broadcast(method=constants.EVENT_DEVICE_HEARTBEAT, exceptions=[self.name], propagateToSkills=True, uid=self.device.uid, deviceUid=self.device.id)
 			else:
 				# do event processing here:
 				#07.10.21 22: 06:14; RING; 0; 015xxxxxx;20996272;SIP0;  # 015#033[0m
 				#07.10.21 22:06:18;DISCONNECT;0;0;#015#033[0m
+				self.broadcast(method=constants.EVENT_DEVICE_HEARTBEAT, exceptions=[self.name], propagateToSkills=True, uid=self.device.uid, deviceUid=self.device.id)
 
 				events = event.split(';')
 				if events[1] == 'RING':
