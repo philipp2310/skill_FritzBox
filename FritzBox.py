@@ -78,6 +78,7 @@ class FritzBox(AliceSkill):
 					prev = call
 				else:
 					return prev
+			return prev
 		except Exception as e:
 			return None
 

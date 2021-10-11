@@ -68,6 +68,5 @@ class Fritzbox(Device):
 			self.skillInstance.updateConfig("lastRead", mc['id'])
 			self.updateParam("lastRead", mc['id'])
 			return OnDeviceClickReaction(action=DeviceClickReactionAction.INFO_NOTIFICATION.value, data=f"Missed call: {mc['date']} {mc['name']}").toDict()
-			#todo: send device update for icon change
 
 		return OnDeviceClickReaction(action=DeviceClickReactionAction.NAVIGATE.value, data=f'http://{self.getConfig("ip")}').toDict()
